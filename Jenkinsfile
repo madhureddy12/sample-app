@@ -66,6 +66,7 @@ spec:
       steps {
         container('helm') {
           sh """
+          gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project dynamic-fulcrum-303503
           helm ls
           kubectl get pods
           """ 
