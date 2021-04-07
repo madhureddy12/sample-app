@@ -35,7 +35,7 @@ spec:
     - cat
     tty: true
   - name: helm
-    image: alpine/helm
+    image: us.gcr.io/dynamic-fulcrum-303503/helm
     command:
     - cat
     tty: true
