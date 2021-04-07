@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    PROJECT = "halodoc-fisclouds"
+    PROJECT = "dynamic-fulcrum-303503"
     APP_NAME = "gceme"
     FE_SVC_NAME = "${APP_NAME}-frontend"
     CLUSTER = "gke-cicd"
@@ -67,7 +67,6 @@ spec:
         container('helm') {
           sh """
           helm ls
-          gcloud container clusters get-credentials gke-apps --zone us-central1-c --project halodoc-fisclouds
           kubectl get pods
           """ 
         }
